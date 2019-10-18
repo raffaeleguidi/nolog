@@ -3,6 +3,19 @@ const qs = require("querystring");
 const moment = require("moment");
 const argv = require('minimist')(process.argv.slice(2));
 
+console.log("nolog (c) 2019 RpG (-h or --help for help)");
+
+if (argv.help || argv.h) {
+  console.log("   --user myuser");
+  console.log("   --password mypass");
+  console.log("   --query \"this AND that\"");
+  console.log("   --filter stream:xxxxx>");
+  console.log("   --refresh 5");
+  console.log("   --fields timestamp,CONTAINER_NAME,message>");
+  console.log("   --help/-h - shows this message");
+  return;
+}
+
 const readlineSync = require('readline-sync');
 
 const username = argv.user || readlineSync.question('User: ');
