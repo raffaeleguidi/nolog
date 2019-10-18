@@ -8,8 +8,9 @@ console.log("nolog (c) 2019 RpG (-h or --help for help)");
 if (argv.help || argv.h) {
   console.log("   --user myuser");
   console.log("   --password mypass");
+  console.log("   --url http://graylog.my.domain/api");
   console.log("   --query \"this AND that\"");
-  console.log("   --filter stream:xxxxx>");
+  console.log("   --filter stream:xxxxxxxxxxxxxx");
   console.log("   --refresh 5");
   console.log("   --fields timestamp,CONTAINER_NAME,message>");
   console.log("   --help/-h - shows this message");
